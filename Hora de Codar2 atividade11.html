@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Micro Calculadora</title>
+</head>
+<body>
+    <script>
+        function calcular() {
+            let num1, num2, operacao, resultado;
+
+            while (true) {
+                num1 = parseInt(prompt("Digite o primeiro valor inteiro:"));
+                
+                if (!isNaN(num1)) {
+                    break;
+                } else {
+                    alert("Valor inválido. Por favor, insira um número inteiro válido.");
+                }
+            }
+
+            while (true) {
+                num2 = parseInt(prompt("Digite o segundo valor inteiro:"));
+                
+                if (!isNaN(num2)) {
+                    break;
+                } else {
+                    alert("Valor inválido. Por favor, insira um número inteiro válido.");
+                }
+            }
+
+            while (true) {
+                operacao = parseInt(prompt("Escolha a operação (1: Adição, 2: Subtração, 3: Divisão, 4: Multiplicação):"));
+                
+                if (operacao >= 1 && operacao <= 4) {
+                    break;
+                } else {
+                    alert("Operação inválida. Por favor, insira 1, 2, 3 ou 4.");
+                }
+            }
+
+            switch (operacao) {
+                case 1:
+                    resultado = num1 + num2;
+                    break;
+                case 2:
+                    resultado = num1 - num2;
+                    break;
+                case 3:
+                    if (num2 === 0) {
+                        alert("Não é possível dividir por zero.");
+                        return;
+                    }
+                    resultado = num1 / num2;
+                    break;
+                case 4:
+                    resultado = num1 * num2;
+                    break;
+            }
+
+            alert(`O resultado da operação é: ${resultado}`);
+        }
+
+        calcular();
+    </script>
+</body>
+</html>
