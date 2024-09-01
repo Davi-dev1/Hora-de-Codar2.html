@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function somadedoisvaloresmaiores(){
+          var valor1=parseInt (prompt("Digite o primeiro valor: "));
+          var valor2=parseInt(prompt("Digite o segundo valor:"));
+           var valor3=parseInt(prompt("Digite o terceiro valor:"));
+           ////
+           var maior1=Math.max(valor1, valor2, valor3);
+           var menor1=Math.min(valor1,valor2,valor3);//Math.min retorna o menor valor passado
+           var segundomaior=valor1+valor2+valor3-maior1-menor1;
+           //
+           const soma = maior1 + segundomaior;
+           alert("A soma dos dois maiores valores é : " +  soma );
+}
+
+
+    </script>
+</head>
+<body>
+    <button onclick="somadedoisvaloresmaiores()">Calcular a soma dos dois valores maiores</button>
+    
+</body>
+</html>
