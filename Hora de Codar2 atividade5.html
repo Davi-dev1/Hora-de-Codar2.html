@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calcularMedia() {
+         
+            var valores = [];
+            for (var i = 1; i <= 6; i++) {
+                var valor = parseFloat(prompt("Digite o valor " + i + ":"));
+                valores.push(valor);
+            }
+
+    
+            var soma = valores.reduce(function(accumulador, valorAtual) {
+                return acumulador + valorAtual;
+            }, 0);
+
+       
+            var media = soma / valores.length;
+       
+            alert("Média aritmética: " + media)
+        }
+    </script>
+</head>
+<body>
+    <button onclick="calcularMedia()">Calcular a média dos valores</button>
+</body>
+</html>
