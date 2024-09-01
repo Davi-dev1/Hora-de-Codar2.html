@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Somar Números Inferiores a 72</title>
+</head>
+<body>
+    <script>
+        function somarNumerosInferioresA72() {
+            var valores = [];
+            let soma = 0;
+            let count = 0;
+
+            while (count < 6) {
+                let valor = parseInt(prompt(`Digite o valor ${count + 1}:`));
+                
+                if (isNaN(valor)) {
+                    alert("Por favor, insira um número válido.");
+                } else {
+                    valores.push(valor);
+
+                    if (valor < 72) {
+                        soma += valor;
+                    }
+
+                    count++;
+                }
+            }
+            alert(`Soma dos valores inferiores a 72 é : ${soma}`);
+        }
+
+        somarNumerosInferioresA72();
+    </script>
+</body>
+</html>
