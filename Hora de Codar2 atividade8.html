@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Calcular Média</title>
+</head>
+<body>
+    <script>
+        function calcularMediaValida() {
+            let valores = [];
+            let count = 0;
+
+            while (count < 4) {
+                let valor = parseFloat(prompt(`Digite o valor ${count + 1} (deve estar entre 0 e 10):`));
+                
+                if (isNaN(valor) || valor <= 0 || valor >= 10) {
+                    alert("Por favor, insira um número válido entre 0 e 10.");
+                } else {
+                    valores.push(valor);
+                    count++;
+                }
+            }
+
+            let soma = valores.reduce((acc, val) => acc + val, 0);
+            let media = soma / valores.length;
+
+            if (media > 5) {
+                alert(`Você passou no teste. Média: ${media}`);
+            } else {
+                alert(`Tente novamente. Média: ${media}`);
+            }
+        }
+
+        calcularMediaValida();
+    </script>
+</body>
+</html>
